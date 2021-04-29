@@ -189,6 +189,7 @@ text-align: right; */
 
 .landing img {
   width: 100%;
+  height: 100%;
 }
 
 .landing #landing-main-image {
@@ -847,6 +848,14 @@ text-align: right; */
 
 @media screen and (max-width: 1020px) {
 
+  .landing-text h1 {
+    font-size: 25px;
+  }
+
+  #landing-bottom-text {
+    font-size: 13px;
+  }
+
   .navbar-brand {
     margin-left: 10%;
   }
@@ -872,6 +881,19 @@ text-align: right; */
 }
 
 @media screen and (max-width: 750px) {
+
+  .cal-loc {
+    width: 100%;
+  }
+
+  .pc-footer {
+    display: block;
+  }
+
+  .landing {
+    height: 50vh;
+  }
+
   .navbar {
     display: none;
   }
