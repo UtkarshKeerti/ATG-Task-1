@@ -1,0 +1,478 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+    <!-- Bootstrap icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
+    <!-- Custom css -->
+    <link rel="stylesheet" href="./style.css">
+    <!-- jQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+
+    <nav class=" navbar navbar-light bg-light">
+        <div class="container-fluid row">
+            <!-- <div class="row"> -->
+            <div class="col">
+                <a class="navbar-brand"><img src="./assets/whole.png" alt=""></a>
+            </div>
+            <div class="col">
+                <form class="d-flex form-1 justify-content-center">
+                    <div class="search-input">
+                        <img src="./assets/Vector (2).png" alt="">
+                        <img class="search-vector" src="./assets/Vector.png" alt="">
+                        <input class=" form-control me-2" type="search"
+                            placeholder="Search for your favourite groups in ATG" aria-label="Search">
+                    </div>
+                    <!-- <div>
+                        <img src="./assets/Vector (2).png" alt="">
+                        <img class="search-vector" src="./assets/Vector.png" alt="">
+                    </div> -->
+                </form>
+            </div>
+            <div class=" nav-top-text col ">
+                <p>Create account. <a href=""  data-bs-toggle="modal" data-bs-target="#exampleModal">Its free!</a> <img id="create-account-dropdown"
+                        src="./assets/Vector (1).png" alt=""></p>
+            </div>
+            <!-- </div> -->
+        </div>
+    </nav>
+
+    <div class="landing">
+        <img id="landing-main-image" src="./assets/Rectangle 2.png" alt="">
+        <img id="landing-overlay" src="./assets/Rectangle 3.png" alt="">
+        <div class="landing-text">
+            <h1 id="landing-text">Computer Engineering</h1>
+            <h4 id="landing-bottom-text">142,765 Computer Engineers follow this</h4>
+        </div>
+    </div>
+
+    <div class="main-part container-fluid">
+        <div class="nav-2">
+            <nav class=" second-nav navbar navbar-expand-lg navbar-light bg-light">
+                <div class="container-fluid">
+                    <!-- <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button> -->
+                    <div class="second-nav-container navbar-collapse" id="navbarSupportedContent">
+                        <ul class="li-container navbar-nav me-auto mb-2 mb-lg-0">
+                            <li class="nav-item nav-active-tab " id="nav-item-1">
+                                <a class="nav-link nav-link-bold" aria-current="page" href="#">All Posts(32)</a>
+                            </li>
+                            <li class="nav-item" id="nav-item-2">
+                                <a class="nav-link " aria-current="page" href="#">Article</a>
+                            </li>
+                            <li class="nav-item" id="nav-item-3">
+                                <a class="nav-link " aria-current="page" href="#">Event</a>
+                            </li>
+                            <li class="nav-item" id="nav-item-4">
+                                <a class="nav-link " aria-current="page" href="#">Education</a>
+                            </li>
+                            <li class="nav-item" id="nav-item-5">
+                                <a class="nav-link " aria-current="page" href="#">Job</a>
+                            </li>
+                        </ul>
+                        <form class="d-flex group_btn">
+                            <div class="writeapost_btn">
+                                Write a Post
+                                <img id="writeapost_img" src="./assets/Vector (1).png" alt="">
+
+                            </div>
+                            <a href=""  data-bs-toggle="modal" data-bs-target="#exampleModal">
+                                <div class="joinagroup_btn">
+                                    <img id="joinagroup_img" src="./assets/baseline-group_add-24px.png" alt="">
+                                    Join Group
+                                </div>
+                            </a>
+                        </form>
+                    </div>
+                </div>
+            </nav>
+        </div>
+        <div class="row">
+            <div class="left-part col-8">
+                <div class="post-cards">
+                    <div class="pc">
+                        <img class="main-card-img" src="./assets/Rectangle 5.png" alt="">
+                        <div class="pc-content">
+                            <div class="pc-content-above d-flex">
+                                <div class="pc-left-content w-100">
+                                    <p id="card-article">✍️ Article</p>
+                                    <div class="card-heading d-flex justify-content-between">
+                                        <h3>What if famous brands had regular fonts? Meet <br> RegulaBrands!</h3>
+                                        <div class="dropdown d-flex align-items-center">
+                                            <a href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown"
+                                                aria-expanded="false">
+                                                <img src="./assets/Vector (5).png" alt="">
+                                            </a>
+                                            <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                                                <li><a class="dropdown-item" href="#">Edit</a></li>
+                                                <li><a class="dropdown-item" href="#">Report</a></li>
+                                                <li><a class="dropdown-item" href="#">Options 3</a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <p id="card-text">I’ve worked in UX for the better part of a decade. From now on, I
+                                        plan
+                                        to
+                                        rei…</p>
+                                </div>
+                            </div>
+                            <div class="pc-footer d-flex justify-content-between">
+                                <div class="pc-footer-left d-flex ">
+                                    <img id="card-sk-img" src="./assets/Rectangle 3 (1).png" alt="">
+                                    <p id="card-sk-text">Sarthak Kamra</p>
+                                </div>
+                                <div class="pc-footer-right d-flex">
+                                    <img id="views-icon" src="./assets/icon/action/visibility_24px_outlined.svg" alt="">
+                                    <p id="views-text">1.4k views</p>
+                                    <div class="share-icon">
+                                        <img id="share-rectangle" src="./assets/Rectangle 4.1.png" alt="">
+                                        <img id="share-icon" src="./assets/baseline-share-24px.png" alt="">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- <div class="pc">
+                        <img class="main-card-img" src="./assets/Rectangle 5 (1).png" alt="">
+                        <div class="pc-content">
+                            <p id="card-article">✍️ Article</p>
+                            <h3>What if famous brands had regular fonts? Meet <br> RegulaBrands!</h3>
+                            <p id="card-text">I’ve worked in UX for the better part of a decade. From now on, I plan to
+                                rei…</p>
+                        </div>
+                    </div> -->
+                    <!-- <div class="pc">
+                        <img class="main-card-img" src="./assets/Rectangle 5 (2).png" alt="">
+                        <div class="pc-content">
+                            <p id="card-article">✍️ Article</p>
+                            <h3>What if famous brands had regular fonts? Meet <br> RegulaBrands!</h3>
+                            <p id="card-text">I’ve worked in UX for the better part of a decade. From now on, I plan to
+                                rei…</p>
+                        </div>
+                    </div> -->
+                    <div class="pc">
+                        <img class="main-card-img" src="./assets/Rectangle 5 (3).png" alt="">
+                        <div class="pc-content">
+                            <div class="pc-content-above d-flex">
+                                <div class="pc-left-content w-100">
+                                    <p id="card-article">🔬️ Education</p>
+                                    <div class="card-heading d-flex justify-content-between">
+                                        <h3>Tax Benefits for Investment under National Pension <br> Scheme launched by
+                                            Government</h3>
+                                        <div class="dropdown d-flex align-items-center">
+                                            <a href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown"
+                                                aria-expanded="false">
+                                                <img src="./assets/Vector (5).png" alt="">
+                                            </a>
+                                            <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                                                <li><a class="dropdown-item" href="#">Edit</a></li>
+                                                <li><a class="dropdown-item" href="#">Report</a></li>
+                                                <li><a class="dropdown-item" href="#">Options 3</a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <p id="card-text">I’ve worked in UX for the better part of a decade. From now on, I
+                                        plan
+                                        to
+                                        rei…</p>
+                                </div>
+                            </div>
+                            <div class="pc-footer d-flex justify-content-between">
+                                <div class="pc-footer-left d-flex ">
+                                    <img id="card-sk-img" src="./assets/Rectangle 3 (2).png" alt="">
+                                    <p id="card-sk-text">Sarah West</p>
+                                </div>
+                                <div class="pc-footer-right d-flex">
+                                    <img id="views-icon" src="./assets/icon/action/visibility_24px_outlined.svg" alt="">
+                                    <p id="views-text">1.4k views</p>
+                                    <div class="share-icon">
+                                        <img id="share-rectangle" src="./assets/Rectangle 4.1.png" alt="">
+                                        <img id="share-icon" src="./assets/baseline-share-24px.png" alt="">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="pc">
+                        <img class="main-card-img" src="./assets/Rectangle 5 (4).png" alt="">
+                        <div class="pc-content">
+                            <div class="pc-content-above d-flex">
+                                <div class="pc-left-content w-100 ">
+                                    <p id="card-article">🔬️ Education</p>
+                                    <div class="card-heading w-100 d-flex justify-content-between">
+                                        <h3>Tax Benefits for Investment under National Pension <br> Scheme launched by
+                                            Government</h3>
+                                        <div class="dropdown d-flex align-items-center ">
+                                            <a href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown"
+                                                aria-expanded="false">
+                                                <img src="./assets/Vector (5).png" alt="">
+                                            </a>
+                                            <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                                                <li><a class="dropdown-item" href="#">Edit</a></li>
+                                                <li><a class="dropdown-item" href="#">Report</a></li>
+                                                <li><a class="dropdown-item" href="#">Options 3</a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="cal-loc-container">
+                                        <div class="cal-loc d-flex justify-content-between">
+                                            <div class="card-cal d-flex justify-content-start">
+                                                <div class="card-cal-img">
+                                                    <img src="./assets/Vector (6).png" alt="">
+                                                </div>
+                                                <p>Fri, 12 Oct, 2018</p>
+                                            </div>
+                                            <div class="card-loc d-flex justify-content-end">
+                                                <div class="card-loc-img">
+                                                    <img src="./assets/outline-location_on-24px.png" alt="">
+                                                </div>
+                                                <p>Ahmedabad, India</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="visit-website">
+                                        <p>Visit Website</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="pc-footer d-flex justify-content-between">
+                                <div class="pc-footer-left d-flex ">
+                                    <img id="card-sk-img" src="./assets/Rectangle 3 (3).png" alt="">
+                                    <p id="card-sk-text">Ronal Jones</p>
+                                </div>
+                                <div class="pc-footer-right d-flex">
+                                    <img id="views-icon" src="./assets/icon/action/visibility_24px_outlined.svg" alt="">
+                                    <p id="views-text">1.4k views</p>
+                                    <div class="share-icon">
+                                        <img id="share-rectangle" src="./assets/Rectangle 4.1.png" alt="">
+                                        <img id="share-icon" src="./assets/baseline-share-24px.png" alt="">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="pc">
+                        <!-- <img class="main-card-img" src="./assets/Rectangle 5 (4).png" alt=""> -->
+                        <div class="pc-content">
+                            <div class="pc-content-above d-flex">
+                                <div class="pc-left-content w-100 ">
+                                    <p id="card-article">💼️ Job</p>
+                                    <div class="card-heading w-100 d-flex justify-content-between">
+                                        <h3>Software Developer</h3>
+                                        <div class="dropdown d-flex align-items-center ">
+                                            <a href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown"
+                                                aria-expanded="false">
+                                                <img src="./assets/Vector (5).png" alt="">
+                                            </a>
+                                            <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                                                <li><a class="dropdown-item" href="#">Edit</a></li>
+                                                <li><a class="dropdown-item" href="#">Report</a></li>
+                                                <li><a class="dropdown-item" href="#">Options 3</a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="cal-loc-container">
+                                        <div class="cal-loc d-flex justify-content-between">
+                                            <div class="card-cal-2 d-flex justify-content-start ">
+                                                <div class="card-cal-img">
+                                                    <img src="./assets/Vector (7).png" alt="">
+                                                </div>
+                                                <p>Innovaccer Analytics Private Ltd.</p>
+                                            </div>
+                                            <div class="card-loc d-flex justify-content-end">
+                                                <div class="card-loc-img">
+                                                    <img src="./assets/outline-location_on-24px.png" alt="">
+                                                </div>
+                                                <p>Noida, India</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="apply-on-times-job">
+                                        <p>Apply on Timesjobs</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="pc-footer d-flex justify-content-between">
+                                <div class="pc-footer-left d-flex ">
+                                    <img id="card-sk-img" src="./assets/Rectangle 3 (4).png" alt="">
+                                    <p id="card-sk-text">Joseph Gray</p>
+                                </div>
+                                <div class="pc-footer-right d-flex">
+                                    <img id="views-icon" src="./assets/icon/action/visibility_24px_outlined.svg" alt="">
+                                    <p id="views-text">1.4k views</p>
+                                    <div class="share-icon">
+                                        <img id="share-rectangle" src="./assets/Rectangle 4.1.png" alt="">
+                                        <img id="share-icon" src="./assets/baseline-share-24px.png" alt="">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="right-part col-4">
+                <div class="location">
+                    <div class="loc-noida d-flex justify-content-between">
+                        <img src="./assets/outline-location_on-24px.png" alt="">
+                        <p>Noida, India</p>
+                    </div>
+                    <img id="right-part-pen" src="./assets/Vector (8).png" alt="">
+                </div>
+                <div class="right-lower-part d-flex">
+                    <div class="right-lower-part-note-icon">
+                        <img src="./assets/Vector (9).png" alt="">
+                    </div>
+                    <p>Your location will help us serve better <br> and extend a personalised experience.</p>
+                </div>
+            </div>
+        </div>
+        <!-- Button trigger modal -->
+        <!-- <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+            Launch demo modal
+        </button> -->
+
+        <!-- Modal -->
+        <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+            aria-hidden="true">
+            <div class="modal-dialog " role="document">
+                <div class="modal-content">
+                    <a href="" data-bs-dismiss="modal"><img id="modal-cross" src="./assets/baseline-cancel-24px.png" alt=""></a>
+                    <div class="modal-header">
+                        <p>Let's learn, share & inspire each other with our passion for computer engineering. Sign up now 🤘🏼</p>
+                        <!-- <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button> -->
+                    </div>
+                    <div class="modal-body row d-flex justify-content-between">
+                        <div class="create-acc-part col">
+                            <h2>Create Account</h2>
+                            <div class="name d-flex">
+                                <input type="text" placeholder="First Name">
+                                <input type="text" placeholder="Last Name">
+                            </div>
+                            <div class="other-details">
+                                <input type="text" placeholder="E-mail">
+                                <input type="text" placeholder="Password">
+                                <input type="text" placeholder="Confirm Password">
+                            </div>    
+                            <a href="">
+                                <div class="modal-1-create-acc-btn">
+                                    Create Account
+                                </div>
+                            </a>
+                            <a href="">
+                                <div class="modal-1-signup-sm d-flex justify-content-center">
+                                    <div class="signup-sm">
+                                        <img src="./assets/f_logo_RGB-Blue_1024.png" alt="">
+                                    </div>
+                                    Sign up with Facebook
+                                </div>
+                            </a>
+                            <a href="">
+                                <div class="modal-1-signup-sm d-flex justify-content-center">
+                                    <div class="signup-sm">
+                                        <img src="./assets/search.png" alt="">
+                                    </div>
+                                    Sign up with Google
+                                </div>
+                            </a>
+                        </div>
+                        <div class="illustration col">
+                            <p id="illustration-signin">Already have an account?<a href="" data-bs-dismiss="modal" data-bs-toggle="modal" data-bs-target="#exampleModal-2"> Sign In</a></p>
+                            <img src="./assets/Group 3.png" alt="">
+                            <p id="illustration-img-below-txt">By signing up, you agree to our Terms & conditions, Privacy policy</p>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+
+     <!-- Modal -->
+     <div class="modal fade" id="exampleModal-2" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+     aria-hidden="true">
+     <div class="modal-dialog " role="document">
+         <div class="modal-content">
+            <a href="" data-bs-dismiss="modal"><img id="modal-cross" src="./assets/baseline-cancel-24px.png" alt=""></a>
+             <div class="modal-header">
+                 <p>Let's learn, share & inspire each other with our passion for computer engineering. Sign up now 🤘🏼</p>
+                 <!-- <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                     <span aria-hidden="true">&times;</span>
+                 </button> -->
+             </div>
+             <div class="modal-body row d-flex justify-content-between">
+                 <div class="sign-in-part col">
+                     <h2>Sign In</h2>
+                     <div class="other-details-2">
+                         <input type="text" placeholder="E-mail">
+                         <input type="text" placeholder="Password">
+                     </div>    
+                     <a href="">
+                         <div class="modal-2-signin-btn">
+                             Sign In
+                         </div>
+                     </a>
+                     <a href="">
+                         <div class="modal-2-signup-sm d-flex justify-content-center">
+                             <div class="signup-sm">
+                                 <img src="./assets/f_logo_RGB-Blue_1024.png" alt="">
+                             </div>
+                             Sign up with Facebook
+                         </div>
+                     </a>
+                     <a href="">
+                         <div class="modal-1-signup-sm d-flex justify-content-center">
+                             <div class="signup-sm">
+                                 <img src="./assets/search.png" alt="">
+                             </div>
+                             Sign up with Google
+                         </div>
+                     </a>
+                     <div class="modal-2-fp d-flex justify-content-center">
+                        Forgot Password?
+                    </div>
+                 </div>
+                 <div class="illustration-2 col">
+                     <p id="illustration-signin">Don’t have an account yet?<a href=""  data-bs-dismiss="modal" data-bs-toggle="modal" data-bs-target="#exampleModal"> Create new for free!</a></p>
+                     <img src="./assets/Group 3.png" alt="">
+                 </div>
+             </div>
+             <!-- <div class="modal-footer">
+                 <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                 <button type="button" class="btn btn-primary">Save changes</button>
+             </div> -->
+         </div>
+     </div>
+ </div>
+</div>
+
+
+    <!-- bootstrap js -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous">
+    </script>
+    <!-- Custom js -->
+    <script src="./main.js"></script>
+</body>
+
+</html>
