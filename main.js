@@ -18,3 +18,18 @@ for (i = 0; i <= tab_active.length; i++) {
   });
 }
 
+function create_acc() {
+  $(".recommended-groups").removeClass("d-none");
+  $(".leaveagroup_btn").removeClass("d-none");
+  $(".joinagroup_btn").addClass("d-none");
+  $(".sg").removeClass("d-none");
+  $(".website-top-create-acc").addClass("d-none");
+}
+
+function leave_acc() {
+  $(".recommended-groups").addClass("d-none");
+  $(".leaveagroup_btn").addClass("d-none");
+  $(".joinagroup_btn").removeClass("d-none");
+  $(".sg").addClass("d-none");
+  $(".website-top-create-acc").removeClass("d-none");
+}

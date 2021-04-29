@@ -23,6 +23,10 @@
 
 <body>
 
+    <div class="mobile-view-pen-icon ">
+        <img src="./assets/Group 6.png" alt="">
+    </div>
+
     <nav class=" navbar navbar-light bg-light">
         <div class="container-fluid row">
             <!-- <div class="row"> -->
@@ -44,14 +48,31 @@
                 </form>
             </div>
             <div class=" nav-top-text col ">
-                <p>Create account. <a href=""  data-bs-toggle="modal" data-bs-target="#exampleModal">Its free!</a> <img id="create-account-dropdown"
+                <p class="website-top-create-acc">Create account. <a href="" data-bs-toggle="modal"
+                        data-bs-target="#exampleModal">Its free!</a> <img id="create-account-dropdown"
                         src="./assets/Vector (1).png" alt=""></p>
+                <div class="pc-footer-left d-flex justify-content-end d-none sg ">
+                    <img id="card-sk-img" src="./assets/Rectangle 3 (4).png" alt="">
+                    <p id="card-sk-text">Joseph Gray</p>
+                </div>
             </div>
             <!-- </div> -->
         </div>
     </nav>
+    <div class="mobileview-top-nav">
+
+        <img src="./assets/Rectangle.png" alt="">
+        <img src="./assets/Oval.png" alt="">
+        <img src="./assets/Path.png" alt="">
+    </div>
 
     <div class="landing">
+        <div class="mobile-view-landing-img-top-text">
+            <img src="./assets/arrow_back_24px.png" alt="">
+            <a href="" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                <p>Join Group</p>
+            </a>
+        </div>
         <img id="landing-main-image" src="./assets/Rectangle 2.png" alt="">
         <img id="landing-overlay" src="./assets/Rectangle 3.png" alt="">
         <div class="landing-text">
@@ -93,16 +114,37 @@
                                 <img id="writeapost_img" src="./assets/Vector (1).png" alt="">
 
                             </div>
-                            <a href=""  data-bs-toggle="modal" data-bs-target="#exampleModal">
+                            <a href="" data-bs-toggle="modal" data-bs-target="#exampleModal">
                                 <div class="joinagroup_btn">
                                     <img id="joinagroup_img" src="./assets/baseline-group_add-24px.png" alt="">
                                     Join Group
                                 </div>
                             </a>
+                            <div onclick="leave_acc()" class="leaveagroup_btn d-none">
+                                <img id="joinagroup_img" src="./assets/Vector (11).png" alt="">
+                                Leave Group
+                            </div>
                         </form>
                     </div>
                 </div>
             </nav>
+        </div>
+        <div class="mobile-view-nav-2">
+            <div class="mobile-view-nav-2-posts">
+                Posts(368)
+            </div>
+            <!-- <a href=""  data-bs-toggle="modal" data-bs-target="#exampleModal">
+                <div class="joinagroup_btn">
+                    <img id="joinagroup_img" src="./assets/baseline-group_add-24px.png" alt="">
+                    Join Group
+                </div>
+            </a> -->
+            <div class="writeapost_btn d-flex justify-content-around">
+                Filter All
+                <div>
+                    <img id="writeapost_img" src="./assets/Vector (1).png" alt="">
+                </div>
+            </div>
         </div>
         <div class="row">
             <div class="left-part col-8">
@@ -341,6 +383,50 @@
                     </div>
                     <p>Your location will help us serve better <br> and extend a personalised experience.</p>
                 </div>
+                <div id="recommended-groups" class="recommended-groups d-none">
+                    <div class="rg-img-1">
+                        <div>
+                            <img src="./assets/Vector (10).png" alt="">
+                        </div>
+                        <p>RECOMMENDED GROUPS</p>
+                    </div>
+                    <div class="rg-row-1">
+                        <div class="rg-row-1-img">
+                            <img src="./assets/Rectangle 6.png" alt="">
+                            <p>Leisure</p>
+                        </div>
+                        <div class="follow">
+                            <p id="follow">Follow</p>
+                        </div>
+                    </div>
+                    <div class="rg-row-1">
+                        <div class="rg-row-1-img">
+                            <img src="./assets/Rectangle 6 (1).png" alt="">
+                            <p>Activism</p>
+                        </div>
+                        <div class="follow">
+                            <p id="follow">Follow</p>
+                        </div>
+                    </div>
+                    <div class="rg-row-1">
+                        <div class="rg-row-1-img">
+                            <img src="./assets/Rectangle 6 (2).png" alt="">
+                            <p>MBA</p>
+                        </div>
+                        <div class="follow">
+                            <p id="follow">Follow</p>
+                        </div>
+                    </div>
+                    <div class="rg-row-1">
+                        <div class="rg-row-1-img">
+                            <img src="./assets/Rectangle 6 (3).png" alt="">
+                            <p>Philosophy</p>
+                        </div>
+                        <div class="follow">
+                            <p id="follow">Follow</p>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
         <!-- Button trigger modal -->
@@ -353,9 +439,11 @@
             aria-hidden="true">
             <div class="modal-dialog " role="document">
                 <div class="modal-content">
-                    <a href="" data-bs-dismiss="modal"><img id="modal-cross" src="./assets/baseline-cancel-24px.png" alt=""></a>
+                    <a id="modal-close-a" href="" data-dismiss="modal"><img id="modal-cross"
+                            src="./assets/baseline-cancel-24px.png" alt=""></a>
                     <div class="modal-header">
-                        <p>Let's learn, share & inspire each other with our passion for computer engineering. Sign up now 🤘🏼</p>
+                        <p>Let's learn, share & inspire each other with our passion for computer engineering. Sign up
+                            now 🤘🏼</p>
                         <!-- <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
                         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                             <span aria-hidden="true">&times;</span>
@@ -372,14 +460,23 @@
                                 <input type="text" placeholder="E-mail">
                                 <input type="text" placeholder="Password">
                                 <input type="text" placeholder="Confirm Password">
-                            </div>    
+                            </div>
+                            <div class="mobile-view-create-acc-signin-holder">
+                                <a href="" data-bs-dismiss="modal">
+                                    <div onclick="create_acc()" id="modal-1-create-acc-btn"
+                                        class="modal-1-create-acc-btn">
+                                        Create Account
+                                    </div>
+                                </a>
+
+                                <a id="mobile-view-modal-create-acc-signin" href="" data-bs-dismiss="modal"
+                                    data-bs-toggle="modal" data-bs-target="#exampleModal-2">
+                                    <p>or, Sign In</p>
+                                </a>
+                            </div>
                             <a href="">
-                                <div class="modal-1-create-acc-btn">
-                                    Create Account
-                                </div>
-                            </a>
-                            <a href="">
-                                <div class="modal-1-signup-sm d-flex justify-content-center">
+                                <div onclick="create_acc()" data-bs-dismiss="modal"
+                                    class="modal-1-signup-sm d-flex justify-content-center">
                                     <div class="signup-sm">
                                         <img src="./assets/f_logo_RGB-Blue_1024.png" alt="">
                                     </div>
@@ -387,7 +484,8 @@
                                 </div>
                             </a>
                             <a href="">
-                                <div class="modal-1-signup-sm d-flex justify-content-center">
+                                <div onclick="create_acc()" data-bs-dismiss="modal"
+                                    class="modal-1-signup-sm d-flex justify-content-center">
                                     <div class="signup-sm">
                                         <img src="./assets/search.png" alt="">
                                     </div>
@@ -395,76 +493,88 @@
                                 </div>
                             </a>
                         </div>
+                        <p id="mobile-view-create-acc-modal-last-text">By signing up, you agree to our Terms & <br>
+                            conditions, Privacy policy</p>
                         <div class="illustration col">
-                            <p id="illustration-signin">Already have an account?<a href="" data-bs-dismiss="modal" data-bs-toggle="modal" data-bs-target="#exampleModal-2"> Sign In</a></p>
+                            <p id="illustration-signin">Already have an account?<a href="" data-bs-dismiss="modal"
+                                    data-bs-toggle="modal" data-bs-target="#exampleModal-2"> Sign In</a></p>
                             <img src="./assets/Group 3.png" alt="">
-                            <p id="illustration-img-below-txt">By signing up, you agree to our Terms & conditions, Privacy policy</p>
+                            <p id="illustration-img-below-txt">By signing up, you agree to our Terms & conditions,
+                                Privacy policy</p>
                         </div>
                     </div>
-                    
+
                 </div>
             </div>
         </div>
     </div>
 
-     <!-- Modal -->
-     <div class="modal fade" id="exampleModal-2" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
-     aria-hidden="true">
-     <div class="modal-dialog " role="document">
-         <div class="modal-content">
-            <a href="" data-bs-dismiss="modal"><img id="modal-cross" src="./assets/baseline-cancel-24px.png" alt=""></a>
-             <div class="modal-header">
-                 <p>Let's learn, share & inspire each other with our passion for computer engineering. Sign up now 🤘🏼</p>
-                 <!-- <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModal-2" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog " role="document">
+            <div class="modal-content">
+                <a id="modal-close-a" href="" data-bs-dismiss="modal"><img id="modal-cross"
+                        src="./assets/baseline-cancel-24px.png" alt=""></a>
+                <div class="modal-header">
+                    <p>Let's learn, share & inspire each other with our passion for computer engineering. Sign up now
+                        🤘🏼</p>
+                    <!-- <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                      <span aria-hidden="true">&times;</span>
                  </button> -->
-             </div>
-             <div class="modal-body row d-flex justify-content-between">
-                 <div class="sign-in-part col">
-                     <h2>Sign In</h2>
-                     <div class="other-details-2">
-                         <input type="text" placeholder="E-mail">
-                         <input type="text" placeholder="Password">
-                     </div>    
-                     <a href="">
-                         <div class="modal-2-signin-btn">
-                             Sign In
-                         </div>
-                     </a>
-                     <a href="">
-                         <div class="modal-2-signup-sm d-flex justify-content-center">
-                             <div class="signup-sm">
-                                 <img src="./assets/f_logo_RGB-Blue_1024.png" alt="">
-                             </div>
-                             Sign up with Facebook
-                         </div>
-                     </a>
-                     <a href="">
-                         <div class="modal-1-signup-sm d-flex justify-content-center">
-                             <div class="signup-sm">
-                                 <img src="./assets/search.png" alt="">
-                             </div>
-                             Sign up with Google
-                         </div>
-                     </a>
-                     <div class="modal-2-fp d-flex justify-content-center">
-                        Forgot Password?
+                </div>
+                <div class="modal-body row d-flex justify-content-between">
+                    <div class="sign-in-part col">
+                        <h2>Sign In</h2>
+                        <div class="other-details-2">
+                            <input type="text" placeholder="E-mail">
+                            <input type="text" placeholder="Password">
+                        </div>
+                        <div class="mobile-view-create-acc-signin-holder">
+                            <a href="" data-bs-dismiss="modal">
+                                <div onclick="create_acc()" class="modal-1-create-acc-btn" data-bs-dismiss="modal">
+                                    Sign In
+                                </div>
+                            </a>
+
+                            <a id="mobile-view-modal-create-acc-signin" href="" data-bs-dismiss="modal"
+                                data-bs-toggle="modal" data-bs-target="#exampleModal">
+                                <p>or, Create Account</p>
+                            </a>
+                        </div>
+                        <a href="" data-bs-dismiss="modal">
+                            <div onclick="create_acc()" data-bs-dismiss="modal"
+                                class="modal-2-signup-sm d-flex justify-content-center">
+                                <div class="signup-sm">
+                                    <img src="./assets/f_logo_RGB-Blue_1024.png" alt="">
+                                </div>
+                                Sign in with Facebook
+                            </div>
+                        </a>
+                        <a href="" data-bs-dismiss="modal">
+                            <div onclick="create_acc()" data-bs-dismiss="modal"
+                                class="modal-1-signup-sm d-flex justify-content-center">
+                                <div class="signup-sm">
+                                    <img src="./assets/search.png" alt="">
+                                </div>
+                                Sign in with Google
+                            </div>
+                        </a>
+                        <div class="modal-2-fp d-flex justify-content-center">
+                            Forgot Password?
+                        </div>
                     </div>
-                 </div>
-                 <div class="illustration-2 col">
-                     <p id="illustration-signin">Don’t have an account yet?<a href=""  data-bs-dismiss="modal" data-bs-toggle="modal" data-bs-target="#exampleModal"> Create new for free!</a></p>
-                     <img src="./assets/Group 3.png" alt="">
-                 </div>
-             </div>
-             <!-- <div class="modal-footer">
-                 <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                 <button type="button" class="btn btn-primary">Save changes</button>
-             </div> -->
-         </div>
-     </div>
- </div>
-</div>
+                    <div class="illustration-2 col">
+                        <p id="illustration-signin">Don’t have an account yet?<a href="" data-bs-dismiss="modal"
+                                data-bs-toggle="modal" data-bs-target="#exampleModal"> Create new for free!</a></p>
+                        <img src="./assets/Group 3.png" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
 
 
     <!-- bootstrap js -->

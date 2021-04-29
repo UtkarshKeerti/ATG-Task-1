@@ -5,6 +5,14 @@
   font-family: 'IBM Plex Sans', sans-serif;
 }
 
+.mobile-view-pen-icon {
+  z-index: 10;
+  display: none;
+  position: fixed;
+  bottom: 10px;
+  right: 10px;
+}
+
 /* .form-1 {
   position: relative;
 }
@@ -137,9 +145,6 @@ text-align: right; */
 
 .nav-top-text {
   margin-right: 2%;
-  width: 183px;
-  height: 21px;
-
   font-style: normal;
   font-weight: 900;
   font-size: 1.2rem;
@@ -147,6 +152,10 @@ text-align: right; */
   /* identical to box height */
   text-align: right;
   color: #2E2E2E;
+}
+
+.nav-top-text p {
+  margin-bottom: 0;
 }
 
 #create-account-dropdown {
@@ -157,10 +166,25 @@ text-align: right; */
   text-decoration: none;
 }
 
+.mobileview-top-nav {
+  display: none;
+  width: 100%;
+  height: 30px;
+}
+
+
+
 /* LANDING PAGE */
 
 .landing {
   position: relative;
+}
+
+.mobile-view-landing-img-top-text {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: none;
 }
 
 .landing img {
@@ -297,6 +321,19 @@ text-align: right; */
   cursor: pointer;
 }
 
+.leaveagroup_btn {
+  /* position: relative; */
+  margin: 0 10px 0 0;
+  padding: 8px 8px;
+  width: 150px;
+  font-size: 1.1rem;
+  /* text-align: right; */
+  color: #6A6A6B;
+  border: 0px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
 /* .joinagroup_btn button {
   width: 150px;
   font-size: 1.1rem;
@@ -319,6 +356,17 @@ text-align: right; */
   top: 35%;
   border: 0px; */
   margin-right: 6px;
+}
+
+.main-part .mobile-view-nav-2 {
+  display: none;
+  margin-top: 20px;
+}
+
+.main-part .mobile-view-nav-2-posts {
+  font-size: 1.1rem;
+  font-weight: 500;
+  margin-top: 10px;
 }
 
 /* CARDS */
@@ -541,7 +589,7 @@ text-align: right; */
 }
 
 .right-part .location {
-  margin-left: 35%;
+  margin-left: 15%;
   border-bottom: 0.4px solid black;
   display: flex;
   justify-content: space-between;
@@ -561,7 +609,7 @@ text-align: right; */
 }
 
 .right-lower-part {
-  margin-left: 35%;
+  margin-left: 25%;
   margin-top: 32px;
 }
 
@@ -574,13 +622,47 @@ text-align: right; */
   margin: 0;
 }
 
+.recommended-groups {
+  width: 60%;
+  margin: 40px auto 0;
+}
+
+.recommended-groups .rg-img-1 {
+  margin-right: 10px;
+  margin-top: 0;
+  display: flex;
+  justify-content: space-between;
+}
+
+.recommended-groups .rg-row-1 {
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.recommended-groups .rg-row-1 .rg-row-1-img {
+  width: 125px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.follow p {
+  padding: 3px;
+}
+
+.follow p:hover {
+  background-color: #000000;
+  color: #FFFFFF;
+  border-radius: 8px;
+}
+
 /* MODAL */
 
 .modal-dialog {
   top: 20%;
   height: 520px;
   width: 880px;
-  max-width: 880px !important;
+  max-width: unset !important;
   /* position: relative; */
 }
 
@@ -687,6 +769,18 @@ text-align: right; */
   margin-top: 30px;
 }
 
+#mobile-view-modal-create-acc-signin {
+  display: none;
+  color: #000000;
+}
+
+#mobile-view-create-acc-modal-last-text {
+  text-align: center;
+  margin-top: 10px;
+  margin-bottom: 0;
+  display: none;
+}
+
 .modal-2-signin-btn {
   display: flex;
   justify-content: center;
@@ -742,13 +836,56 @@ text-align: right; */
   font-weight: 600;
 }
 
-.modal-content #modal-cross {
+.modal-content #modal-close-a {
   position: absolute;
   top: -35px;
-  right: 0px;
+  right: 0;
 }
 
+
 /* MEDIA QUERIES */
+
+@media screen and (max-width: 1020px) {
+
+  .navbar-brand {
+    margin-left: 10%;
+  }
+
+  .form-control {
+    width: 300px;
+  }
+
+  .search-vector {
+    height: 15px;
+    width: 15px;
+  }
+
+  .form-1 ::placeholder {
+    font-size: 0.8rem;
+  }
+
+  .nav-top-text {
+    font-size: 0.8rem;
+    margin: 0;
+    padding: 0;
+  }
+}
+
+@media screen and (max-width: 750px) {
+  .navbar {
+    display: none;
+  }
+
+  .mobileview-top-nav {
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  .mobileview-top-nav img {
+    margin: 5px 0 5px 10px;
+    padding: 2px 2px 2px 5px;
+  }
+}
 
 @media screen and (max-width: 1300px) {
   .nav-2 .group_btn {
@@ -775,9 +912,15 @@ text-align: right; */
 @media screen and (max-width: 990px) {
   .nav-2 {
     padding: 25px 0 0 0;
+    display: none;
   }
 
-  .nav-2 .li-container #nav-item-2 {
+  .main-part .mobile-view-nav-2 {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  /* .nav-2 .li-container #nav-item-2 {
     display: none;
   }
 
@@ -799,5 +942,91 @@ text-align: right; */
 
   .second-nav .container-fluid .li-container .nav-active-tab a {
     border: 0px;
+  } */
+}
+
+@media screen and (max-width: 700px) {
+  .main-part {
+    padding: 0 10px 0 10px;
   }
+
+  .mobile-view-pen-icon {
+    display: block;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .mobile-view-landing-img-top-text {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    height: 50px;
+    z-index: 1;
+  }
+
+  .mobile-view-landing-img-top-text img {
+    width: 20px;
+    height: 20px;
+  }
+
+  .mobile-view-landing-img-top-text p {
+    border: 0.6px solid white;
+    border-radius: 4px;
+    margin: 10px 10px 0 0;
+    padding: 3px;
+  }
+
+  .mobile-view-landing-img-top-text a {
+    text-decoration: none;
+    color: white;
+  }
+
+  .modal-dialog {
+    width: 100vw;
+  }
+
+  .modal-header {
+    display: none;
+  }
+
+  .illustration {
+    display: none;
+  }
+
+  .illustration-2 {
+    display: none;
+  }
+
+  .modal-body .name input {
+    width: 100%;
+  }
+
+  #mobile-view-modal-create-acc-signin {
+    display: flex;
+  }
+
+  .mobile-view-create-acc-signin-holder {
+    display: flex;
+    justify-content: space-between;
+    width: 90%;
+    align-items: center;
+    margin-left: 20px;
+  }
+
+  .modal-1-create-acc-btn {
+    width: 150%;
+    font-size: 0.8rem;
+  }
+
+  #mobile-view-create-acc-modal-last-text {
+    display: block;
+  }
+
+  /* .modal-content #modal-close-a {
+    position: absolute;
+    top: 10px;
+    right: 10;
+    background: #212529;
+
+  } */
 }
